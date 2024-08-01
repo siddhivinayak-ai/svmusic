@@ -1,0 +1,105 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="music.css">
+    <title>Galaxy Music</title>
+</head>
+<body>
+    
+    <header class="header">
+      <div class="logo" style="margin-right:10px ;color: rgb(255, 0, 106);">Sk.Music </div>
+      <!-- <div class="logo">
+          <img src="shoes/2.avif" alt="Galaxy Music Logo">
+      </div> -->
+      <div class="search-bar">
+          <input type="text" placeholder="Search" id="search-bar">
+      </div>
+      <div class="profile">
+          <img src="shoes/5.avif" alt="Profile Picture">
+      </div>
+  </header>
+  
+  <!-- Search Results Container (initially hidden, displayed dynamically via JavaScript) -->
+  <div class="search-results" style="display: none;"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="playlist-section" id="favorite-playlist">
+            <h2>Favorites</h2>
+            <div class="playlist">
+                <!-- Playlist items added via JavaScript -->
+            </div>
+        </section>
+
+        <section class="playlist-section" id="most-played">
+            <h2>Most Played</h2>
+            <div class="playlist">
+                <!-- Playlist items added via JavaScript -->
+            </div>
+        </section>
+
+        <section class="playlist-section" id="romantics">
+            <h2>Romantics</h2>
+            <div class="playlist">
+                <!-- Playlist items added via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Now Playing Bar -->
+    <div class="now-playing-bar">
+        <div class="song-info">
+            <img src="shoes/1.avif" alt="Thumbnail" id="mini-thumbnail">
+            <div class="text">
+                <p id="mini-song-title">Song Title</p>
+                <p id="mini-artist-name">Artist Name</p>
+            </div>
+        </div>
+        <div class="playback-controls">
+            <button id="mini-play-pause-btn"><i class="ri-play-circle-fill"></i></button>
+        </div>
+    </div>
+
+    <!-- Fullscreen Music Player -->
+    <div class="music-player" id="music-player">
+        <div class="music-thumbnail">
+            <img src="shoes/1.avif" alt="Music Thumbnail" id="thumbnail">
+        </div>
+        <div class="music-info">
+            <h2 id="song-title">Song Title</h2>
+            <p id="artist-name">Artist Name</p>
+        </div>
+        <div class="controls">
+            <button id="prev-btn"><i class="ri-skip-back-mini-fill"></i></button>
+            <button id="play-pause-btn"><i class="ri-play-circle-fill"></i></button>
+            <button id="next-btn"><i class="ri-skip-forward-mini-fill"></i></button>
+        </div>
+        <div class="progress-bar">
+            <input type="range" id="progress" value="0" max="100">
+        </div>
+        <div class="minimize-btn" id="minimize-btn">
+            <i class="ri-arrow-down-s-line"></i>
+        </div>
+        <div class="playlist-queue" id="playlist-queue">
+            <!-- Queue items added via JavaScript -->
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+        <ul>
+            <li><i class="ri-home-fill"></i></li>
+            <li><i class="ri-search-line"></i></li>
+            <li><i class="ri-play-list-fill"></i></li>
+            <li><i class="ri-user-3-fill"></i></li>
+        </ul>
+    </nav>
+
+    <script src="music.js"></script>
+</body>
+</html>
